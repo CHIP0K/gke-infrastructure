@@ -7,7 +7,7 @@ GKE cluster
 infracost breakdown --path . --format table --terraform-var-file ./vars.tfvars
 ```
 
-# Apply infrastructure
+## Apply infrastructure
 
 ```bash
 terraform plan -var-file=./vars.tfvars
