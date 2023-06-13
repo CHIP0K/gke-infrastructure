@@ -2,10 +2,20 @@
 
 ## Before apply
 
-1. Create terraform block
+1. Create terraform vars file
 
 ```bash
-cat > 
+cat > vars.tfvars <<'EOF'
+# Github variables
+GITHUB_OWNER="USERNAME"
+GITHUB_TOKEN="xxxxxxxxxxxx"
+FLUX_GITHUB_REPO="flux-gitops"
+# GCP variables
+GOOGLE_PROJECT = "username-k8s"
+GOOGLE_REGION  = "us-central1-c"
+GKE_NUM_NODES  = 2
+
+EOF
 ```
 
 
