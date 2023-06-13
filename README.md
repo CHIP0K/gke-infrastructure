@@ -1,5 +1,14 @@
 # gke-infrastructure
-GKE cluster
+
+## Before apply
+
+1. Create terraform block
+
+```bash
+cat > 
+```
+
+
 
 ## show cost environment
 
