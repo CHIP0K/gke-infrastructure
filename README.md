@@ -18,9 +18,7 @@ GKE_NUM_NODES  = 2
 EOF
 ```
 
-
-
-## show cost environment
+## Show cost environment
 
 ```bash
 infracost breakdown --path . --format table --terraform-var-file ./vars.tfvars
@@ -29,8 +27,15 @@ infracost breakdown --path . --format table --terraform-var-file ./vars.tfvars
 ## Apply infrastructure
 
 ```bash
+terraform init
 terraform plan -var-file=./vars.tfvars
 terraform apply -var-file=./vars.tfvars
+```
+
+## Show created inftastructure
+
+```bash
+terraform state list
 ```
 
 <!-- BEGIN_TF_DOCS -->
