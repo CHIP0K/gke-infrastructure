@@ -38,6 +38,6 @@ variable "KUBE_CONFIG_PATH" {
 
 variable "FLUX_CLUSTER_PATH" {
   type        = string
-  default     = "clusters/sops"
+  default     = "clusters"
   description = "Path to the config in the git repository"
 }
