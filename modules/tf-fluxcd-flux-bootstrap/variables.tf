@@ -22,6 +22,6 @@ variable "private_key" {
 
 variable "config_path" {
   type        = string
-  default     = "~/.kube/config"
+  default     = "modules/kubeconfig"
   description = "The path to the kubeconfig file"
 }

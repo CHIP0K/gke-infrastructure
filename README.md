@@ -51,10 +51,10 @@ No providers.
 
 | Name | Source | Version |
 |------|--------|---------|
-| <a name="module_flux_bootstrap"></a> [flux\_bootstrap](#module\_flux\_bootstrap) | github.com/den-vasyliev/tf-fluxcd-flux-bootstrap | n/a |
-| <a name="module_github_repository"></a> [github\_repository](#module\_github\_repository) | github.com/den-vasyliev/tf-github-repository | n/a |
-| <a name="module_gke_cluster"></a> [gke\_cluster](#module\_gke\_cluster) | github.com/den-vasyliev/tf-google-gke-cluster | n/a |
-| <a name="module_tls_private_key"></a> [tls\_private\_key](#module\_tls\_private\_key) | github.com/den-vasyliev/tf-hashicorp-tls-keys | n/a |
+| <a name="module_flux_bootstrap"></a> [flux\_bootstrap](#module\_flux\_bootstrap) | ./modules/tf-fluxcd-flux-bootstrap | n/a |
+| <a name="module_github_repository"></a> [github\_repository](#module\_github\_repository) | ./modules/tf-github-repository | n/a |
+| <a name="module_gke_cluster"></a> [gke\_cluster](#module\_gke\_cluster) | ./modules/tf-google-gke-cluster | n/a |
+| <a name="module_tls_private_key"></a> [tls\_private\_key](#module\_tls\_private\_key) | ./modules/tf-hashicorp-tls-keys | n/a |
 
 ## Resources
 
@@ -67,10 +67,11 @@ No resources.
 | <a name="input_GITHUB_OWNER"></a> [GITHUB\_OWNER](#input\_GITHUB\_OWNER) | The GitHub owner | `string` | n/a | yes |
 | <a name="input_GITHUB_TOKEN"></a> [GITHUB\_TOKEN](#input\_GITHUB\_TOKEN) | GitHub personal access token | `string` | n/a | yes |
 | <a name="input_GOOGLE_PROJECT"></a> [GOOGLE\_PROJECT](#input\_GOOGLE\_PROJECT) | GCP project name | `string` | n/a | yes |
+| <a name="input_FLUX_CLUSTER_PATH"></a> [FLUX\_CLUSTER\_PATH](#input\_FLUX\_CLUSTER\_PATH) | Path to the config in the git repository | `string` | `"clusters/sops"` | no |
 | <a name="input_FLUX_GITHUB_REPO"></a> [FLUX\_GITHUB\_REPO](#input\_FLUX\_GITHUB\_REPO) | GitHub repository | `string` | `"flux-gitops"` | no |
 | <a name="input_GKE_NUM_NODES"></a> [GKE\_NUM\_NODES](#input\_GKE\_NUM\_NODES) | GKE nodes number | `number` | `2` | no |
 | <a name="input_GOOGLE_REGION"></a> [GOOGLE\_REGION](#input\_GOOGLE\_REGION) | GCP region to use | `string` | `"us-central1-c"` | no |
-| <a name="input_KUBE_CONFIG_PATH"></a> [KUBE\_CONFIG\_PATH](#input\_KUBE\_CONFIG\_PATH) | The path to the kubeconfig file | `string` | `"kubeconfig"` | no |
+| <a name="input_KUBE_CONFIG_PATH"></a> [KUBE\_CONFIG\_PATH](#input\_KUBE\_CONFIG\_PATH) | The path to the kubeconfig file | `string` | `"modules/kubeconfig"` | no |
 
 ## Outputs
 

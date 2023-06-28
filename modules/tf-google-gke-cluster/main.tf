@@ -49,15 +49,15 @@ resource "local_file" "kubeconfig" {
   # filename = "${path.module}/kubeconfig"
   filename = var.config_path
   file_permission = "0400"
-  # lifecycle {
-  #   ignore_changes = [
-  #     content,
-  #     content_base64sha256,
-  #     content_base64sha512,
-  #     content_md5,
-  #     content_sha1,
-  #     content_sha256,
-  #     content_sha512
-  #   ]
-  # }
+  lifecycle {
+    ignore_changes = [
+      content
+      # content_base64sha256,
+      # content_base64sha512,
+      # content_md5,
+      # content_sha1,
+      # content_sha256,
+      # content_sha512
+    ]
+  }
 }

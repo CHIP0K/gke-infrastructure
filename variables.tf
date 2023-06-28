@@ -31,7 +31,13 @@ variable "FLUX_GITHUB_REPO" {
 
 # kube-ctl variables
 variable "KUBE_CONFIG_PATH" {
-  type = string
-  default = "kubeconfig"
+  type        = string
+  default     = "modules/kubeconfig"
   description = "The path to the kubeconfig file"
+}
+
+variable "FLUX_CLUSTER_PATH" {
+  type        = string
+  default     = "clusters/sops"
+  description = "Path to the config in the git repository"
 }
